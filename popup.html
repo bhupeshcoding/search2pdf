@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Free Book Finder</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Free Book Finder</h1>
+            <p class="subtitle">Find free PDF books on any topic</p>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" 
+                   id="searchQuery" 
+                   placeholder="Enter book name, author, or topic..."
+                   aria-label="Search for books">
+            <button id="searchBtn">
+                <span class="btn-text">Search Books</span>
+                <span class="btn-icon">🔍</span>
+            </button>
+        </div>
+        
+        <div class="hint">
+            <p>Tip: Try searching for specific topics like "machine learning" or authors like "Jane Austen"</p>
+        </div>
+        
+        <div class="status" id="status"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
+
+
+
+
+

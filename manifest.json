@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Search2PDF",
+  "version": "1.0.0",
+  "description": "Search2PDF - Quickly find and access free PDFs, ebooks, and academic papers directly from Google search results. Save time by identifying downloadable content at a glance with our intuitive interface.",
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/search*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
